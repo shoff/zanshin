@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zanshin", "Zanshin\Zanshin.csproj", "{BAA94439-8C42-41E3-9D42-13B0A0476DF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zanshin.Tests", "Zanshin.Tests\Zanshin.Tests.csproj", "{E0DFCA97-2505-4ACE-BF55-E5F49E362D49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zanshin.Domain", "Zanshin.Domain\Zanshin.Domain.csproj", "{2FBED436-815D-4058-B3BD-B22689CF9B36}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B4E7BA07-625C-4DEC-92AB-6C3B9ADF4F7E}"
+	ProjectSection(SolutionItems) = preProject
+		WE-Palette.css = WE-Palette.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6C540236-6061-46B7-B5A1-236711770D67}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zanshin.WebApi", "Zanshin.WebApi\Zanshin.WebApi.csproj", "{95C1FB72-25E4-44AE-956F-F0614E7384C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAA94439-8C42-41E3-9D42-13B0A0476DF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAA94439-8C42-41E3-9D42-13B0A0476DF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAA94439-8C42-41E3-9D42-13B0A0476DF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAA94439-8C42-41E3-9D42-13B0A0476DF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0DFCA97-2505-4ACE-BF55-E5F49E362D49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0DFCA97-2505-4ACE-BF55-E5F49E362D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0DFCA97-2505-4ACE-BF55-E5F49E362D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0DFCA97-2505-4ACE-BF55-E5F49E362D49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FBED436-815D-4058-B3BD-B22689CF9B36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FBED436-815D-4058-B3BD-B22689CF9B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FBED436-815D-4058-B3BD-B22689CF9B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FBED436-815D-4058-B3BD-B22689CF9B36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95C1FB72-25E4-44AE-956F-F0614E7384C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C1FB72-25E4-44AE-956F-F0614E7384C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C1FB72-25E4-44AE-956F-F0614E7384C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C1FB72-25E4-44AE-956F-F0614E7384C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

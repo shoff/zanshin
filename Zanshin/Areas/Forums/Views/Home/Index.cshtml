@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "Forums";
+}
+
+<h2>Zanshin Forums</h2>
+
+<div ng-controller="categoryController" class="row" ng-cloak>
+
+    <ol class="breadcrumb">
+        <li><a href="/">home</a></li>
+        <li><a href="/Forums">forums</a></li>
+        <li><a ng-cloak href="/Forums/{{forum.forumId}}" ng-bind="forum.name"></a></li>
+    </ol>
+    <!-- iterate categories -->
+    <div class="panel panel-default widget" ng-repeat="category in categories" ng-cloak>
+        <div class="panel-heading">
+            <div class="pull-right">
+                <span class="kendo-glyph glyphicon glyphicon-comment"></span>
+                Category count: <strong><span ng-bind="categories.length"></span></strong>
+                Forum count: <strong><span ng-bind="forumCount"></span></strong>
+                <div class="small kendo-glyph" style="margin-left:20px;">
+                    <em>
+                        Created on:<span ng-cloak>{{category.dateCreated | date:"MM/dd/yyyy 'at' h:mma" }}</span><br />
+                        Last updated: <span ng-cloak>{{category.lastUpdated | date:"MM/dd/yyyy 'at' h:mma" }}</span>
+                    </em>
+                </div>
+            </div>
+            <h3 class="cateogory-title" ng-bind="category.name"></h3>
+
+        </div>
+        <div class="panel-body">
+            <!-- iterate forums -->
+            <ul class="list-group">
+                <li ng-repeat="forum in category.forums" class="list-group-item">
+                    <div class="row">
+                        <div class="col-xs-2 col-md-1">
+                            <img ng-src="{{forum.forumImage}}" class="img-thumbnail img-responsive" alt="" />
+                        </div>
+                        <div class="col-xs-10 col-md-11">
+                            <div class="lead">
+                                <a ng-href="/Forums/{{forum.forumId}}" ng-bind="forum.name"></a>
+                            </div>
+                            <div class="mic-info">
+                                By: <a ng-href="#" ng-bind="topic.topicStarterName"></a> on <span ng-bind="topic.createdDate"></span>
+                            </div>
+
+                            <div class="comment-text">
+                                Topic count:<strong><span ng-bind="forum.topicCount"></span></strong><br />
+                                Post count: <strong><span ng-bind="forum.postCount"></span></strong><br />
+                                Last updated: <span ng-cloak>{{forum.lastUpdated | date:"MM/dd/yyyy 'at' h:mma" }}</span>
+                            </div>
+                            @*<div class="action">
+                                    <button type="button" class="btn btn-primary btn-xs" title="Edit">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-xs" title="Approved">
+                                        <span class="glyphicon glyphicon-ok"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-xs" title="Delete">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </button>
+                                </div>*@
+                        </div>
+                    </div>
+
+
+                    @*<div class="row">
+                        <h2 class=" box-title">
+                            {{ category.name }}
+                        </h2>*@
+
+                    @*<div class="row">
+                            <div class="col-xs-6" ng-bind="category.name"></div>
+                            <div class="col-xs-1">Topics</div>
+                            <div class="col-xs-1">Posts</div>
+                            <div class="col-xs-4">Last Post</div>
+                        </div>*@
+
+                    @*<div class="row" ng-repeat="forum in category.forums">
+                                <div class="col-xs-2 col-md-1">
+                                    <img  ng-show="forum.forumImage" ng-src="{{forum.forumImage}}" class="img-rounded img-responsive" alt="" />
+                                </div>
+
+                                <div class="col-xs-6">
+                                    <a ng-href="/Forums/{{forum.forumId}}" class="list-group-item" ng-bind="forum.name"></a>
+                                    <p class="list-group-item-text" ng-bind="forum.forumDescription"></p>
+                                </div>
+
+                                <div class="col-xs-1" ng-bind="forum.topicCount"></div>
+                                <div class="col-xs-1" ng-bind="forum.postCount"></div>
+                                <div class="col-xs-4">Last Post</div>
+                            </div>
+
+                        </div>*@
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+

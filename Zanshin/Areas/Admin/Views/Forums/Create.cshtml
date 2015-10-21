@@ -1,0 +1,63 @@
+﻿@model Zanshin.Domain.Entities.Forum.Forum
+<style type="text/css">
+    .css-form input.ng-invalid.ng-touched {
+    }
+
+    .css-form input.ng-valid.ng-touched {
+    }
+</style>
+
+<div class="form-horizontal" ng-controller="forumController">
+    <h4>Forum</h4>
+
+    <form name="form" novalidate class="css-form">
+
+        <input type="hidden" name="forum.PostCount" ng-model="forum.PostCount" />
+        <input type="hidden" name="forum.TopicCount" ng-model="forum.TopicCount" />
+        <div class="form-group">
+            <label for="forumName">Forum name</label>
+            <input id="forumName" name="uName" type="text" class="form-control" ng-model="forum.Name"/>
+        </div>
+        <div class="form-group">
+            <label for="forumDescription">Description</label>
+            <textarea id="forumDescription" class="form-control" ng-model="forum.ForumDescription"></textarea>
+        </div>
+        <div class="form-group">
+            <div class="checkbox-inline">
+                <label><input type="checkbox" name="allowHtml" ng-model="forum.AllowHtml" ng-true-value="true" ng-false-value="false"> Allow HTML</label>
+            </div>
+            <div class="checkbox-inline">
+                <label><input type="checkbox" name="allowBBCode" ng-model="forum.AllowBBCode" ng-true-value="true" ng-false-value="false">Allow BBCode</label>
+            </div>
+
+            <div class="checkbox-inline">
+                <label><input type="checkbox" name="allowSigs" ng-model="forum.AllowSigs" ng-true-value="true" ng-false-value="false">Allow sigs</label>
+            </div>
+            <div class="checkbox-inline">
+                <label><input type="checkbox" name="isPrivate" ng-model="forum.IsPrivate" ng-true-value="true" ng-false-value="false">Private</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="postsPerPage">Number of posts per page</label>
+            <input id="postsPerPage" type="number" min="5" max="50" number value="5" class="input-xs" ng-model="forum.PostsPerPage" />
+        </div>
+        <div class="form-group">
+            <label for="topicsPerPage">Number of topics per page</label>
+            <input id="topicsPerPage" type="number" min="5" max="100" number class="input-xs" value="20" ng-model="forum.TopicsPerPage" />
+        </div>
+        <div class="form-group">
+            <label for="hotTopicThreashold">Hot topic threshold</label>
+            <input id="hotTopicThreashold" type="number" min="5" max="5000" number class="input-xs" ng-model="forum.HotTopicThreashold" />
+        </div>
+        <div class="form-group alert alert-danger col-md-4" id="errorDiv" style="display: none;">
+            {{ validationMessage }}
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-1 col-md-10">
+                <span id="spinner" style="display: none;"><img src="~/images/ajax-loader.gif" /></span>
+                <input type="submit" ng-click="addForum(forum)" value="Submit" />
+            </div>
+        </div>
+    </form>
+</div>

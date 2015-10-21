@@ -1,0 +1,42 @@
+﻿
+<div>
+
+    <div id="smiley-box">
+        <strong>Smilies</strong><br>
+        <a ng-href="" ng-click="addSmile(':D', editorText)"><img src="/images/Smiles/icon_e_biggrin.gif" width="15" height="17" alt=":D" title="Very Happy"></a>
+        <a ng-href="" ng-click="addSmile(':)', editorText)"><img src="/images/Smiles/icon_e_smile.gif" width="15" height="17" alt=":)" title="Smile"></a>
+        <a ng-href="" ng-click="addSmile(';)', editorText)"><img src="/images/Smiles/icon_e_wink.gif" width="15" height="17" alt=";)" title="Wink"></a>
+        <a ng-href="" ng-click="addSmile(':(', editorText)"><img src="/images/Smiles/icon_e_sad.gif" width="15" height="17" alt=":(" title="Sad"></a>
+        <a ng-href="" ng-click="addSmile(':o', editorText)"><img src="/images/Smiles/icon_e_surprised.gif" width="15" height="17" alt=":o" title="Surprised"></a>
+        <a ng-href="" ng-click="addSmile(':shock:', editorText)"><img src="/images/Smiles/icon_eek.gif" width="15" height="17" alt=":shock:" title="Shocked"></a>
+        <a ng-href="" ng-click="addSmile(':?', editorText)"><img src="/images/Smiles/icon_e_confused.gif" width="15" height="17" alt=":?" title="Confused"></a>
+        <a ng-href="" ng-click="addSmile('8-)', editorText)"><img src="/images/Smiles/icon_cool.gif" width="15" height="17" alt="8-)" title="Cool"></a>
+        <a ng-href="" ng-click="addSmile(':lol:', editorText)"><img src="/images/Smiles/icon_lol.gif" width="15" height="17" alt=":lol:" title="Laughing"></a>
+        <a ng-href="" ng-click="addSmile(':x', editorText)"><img src="/images/Smiles/icon_mad.gif" width="15" height="17" alt=":x" title="Mad"></a>
+        <a ng-href="" ng-click="addSmile(':P', editorText)"><img src="/images/Smiles/icon_razz.gif" width="15" height="17" alt=":P" title="Razz"></a>
+        <a ng-href="" ng-click="addSmile(':oops:', editorText)"><img src="/images/Smiles/icon_redface.gif" width="15" height="17" alt=":oops:" title="Embarrassed"></a>
+        <a ng-href="" ng-click="addSmile(':cry:', editorText)"><img src="/images/Smiles/icon_cry.gif" width="15" height="17" alt=":cry:" title="Crying or Very Sad"></a>
+        <a ng-href="" ng-click="addSmile(':evil:', editorText)"><img src="/images/Smiles/icon_evil.gif" width="15" height="17" alt=":evil:" title="Evil or Very Mad"></a>
+        <a ng-href="" ng-click="addSmile(':twisted:', editorText)"><img src="/images/Smiles/icon_twisted.gif" width="15" height="17" alt=":twisted:" title="Twisted Evil"></a>
+        <a ng-href="" ng-click="addSmile(':roll:', editorText)"><img src="/images/Smiles/icon_rolleyes.gif" width="15" height="17" alt=":roll:" title="Rolling Eyes"></a>
+        <a ng-href="" ng-click="addSmile(':!:', editorText)"><img src="/images/Smiles/icon_exclaim.gif" width="15" height="17" alt=":!:" title="Exclamation"></a>
+        <a ng-href="" ng-click="addSmile(':?:', editorText)"><img src="/images/Smiles/icon_question.gif" width="15" height="17" alt=":?:" title="Question"></a>
+        <a ng-href="" ng-click="addSmile(':idea:', editorText)"><img src="/images/Smiles/icon_idea.gif" width="15" height="17" alt=":idea:" title="Idea"></a>
+        <a ng-href="" ng-click="addSmile(':arrow:', editorText)"><img src="/images/Smiles/icon_arrow.gif" width="15" height="17" alt=":arrow:" title="Arrow"></a>
+        <a ng-href="" ng-click="addSmile(':|', editorText)"><img src="/images/Smiles/icon_neutral.gif" width="15" height="17" alt=":|" title="Neutral"></a>
+        <a ng-href="" ng-click="addSmile(':mrgreen:', editorText)"><img src="/images/Smiles/icon_mrgreen.gif" width="15" height="17" alt=":mrgreen:" title="Mr. Green"></a>
+        <a ng-href="" ng-click="addSmile(':geek:', editorText)"><img src="/images/Smiles/icon_e_geek.gif" width="17" height="17" alt=":geek:" title="Geek"></a>
+        <a ng-href="" ng-click="addSmile(':ugeek:', editorText)"><img src="/images/Smiles/icon_e_ugeek.gif" width="17" height="18" alt=":ugeek:" title="Uber Geek"></a>
+        @*<hr>
+        <a ng-href="./faq.php?mode=bbcode">BBCode</a> is <em>ON</em><br>
+
+        [img] is <em>ON</em><br>
+        [flash] is <em>ON</em><br>
+        [url] is <em>ON</em><br>
+
+        Smilies are <em>ON</em>
+        <hr><strong><a ng-href="#review">Topic review</a></strong>*@
+    </div>
+    <textarea ckeditor="editorOptions" name="editor" ng-model="editorText" required="required"></textarea>
+    {{editorText}}
+</div>

@@ -1,0 +1,35 @@
+﻿<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            @Html.ActionLink(UserInterface.NameHeaderText, "Index", "Home", new
+           {
+               area = ""
+           }, new
+           {
+               @class = "navbar-brand"
+           })
+        </div>
+        <div>
+
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink(UserInterface.Home, "Index", new
+                   {
+                       Area = "",
+                       Controller = "Home"
+                   })</li>
+                <li>@Html.ActionLink(UserInterface.Forums, "Index", new
+                   {
+                       Area = "Forums",
+                       Controller = "Home"
+                   })</li>
+                <li>@Html.ActionLink(UserInterface.ContactUs, "Contact", new
+                   {
+                       Area = "",
+                       Controller = "Home"
+                   })</li>
+            </ul>
+            @Html.Partial("_BootstrapLogin")
+        </div>
+    </div>
+</nav>
+

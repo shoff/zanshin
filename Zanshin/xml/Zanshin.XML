@@ -1,0 +1,1253 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Zanshin</name>
+    </assembly>
+    <members>
+        <member name="T:Zanshin.BundleConfig">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Zanshin.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)">
+            <summary>
+            Registers the bundles.
+            </summary>
+            <param name="bundles">The bundles.</param>
+        </member>
+        <member name="T:Zanshin.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Zanshin.Startup.ConfigureAuth(Owin.IAppBuilder)">
+            <summary>
+            Configures the authentication.
+            </summary>
+            <param name="app">The application.</param>
+            <exception cref="T:System.OverflowException"><paramref>
+                    <name>value</name>
+                </paramref>
+                is less than <see cref="F:System.TimeSpan.MinValue"/> 
+            or greater than <see cref="F:System.TimeSpan.MaxValue"/>.-or-<paramref>
+                    <name>value</name>
+                </paramref>
+                is <see cref="F:System.Double.PositiveInfinity"/>.
+            -or-<paramref>
+                    <name>value</name>
+                </paramref>
+                is <see cref="F:System.Double.NegativeInfinity"/>.</exception>
+        </member>
+        <member name="M:Zanshin.Startup.Configuration(Owin.IAppBuilder)">
+            <summary>
+            Configurations the specified application.
+            </summary>
+            <param name="app">The application.</param>
+        </member>
+        <member name="M:Zanshin.SwaggerConfig.Register">
+            <summary>
+            Registers this instance.
+            </summary>
+        </member>
+        <member name="T:Zanshin.Areas.Admin.AdminResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.Admin.AdminResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.Admin.AdminResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.Admin.AdminResources.Discussions">
+            <summary>
+              Looks up a localized string similar to Discussions.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.Admin.AdminResources.ForumAdmin">
+            <summary>
+              Looks up a localized string similar to Forums Administration.
+            </summary>
+        </member>
+        <member name="T:Zanshin.Areas.Admin.Controllers.ForumsController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.Admin.Controllers.ForumsController.Index">
+            <summary>
+            Indexes this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.Areas.Admin.Controllers.ForumsController.Details(System.Int32)">
+            <summary>
+            Details es the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.Areas.Admin.Controllers.ForumsController.Create">
+            <summary>
+            Creates this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.Areas.Admin.Controllers.ForumsController.Create(Zanshin.Domain.Entities.Forum.Forum)">
+            <summary>
+            Creates the specified collection.
+            </summary>
+            <param name="forum">The forum.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.Areas.Admin.Controllers.ForumsController.Edit(System.Int32)">
+            <summary>
+            Edits the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.Areas.Admin.Controllers.ForumsController.Edit(System.Int32,System.Web.Mvc.FormCollection)">
+            <summary>
+            Edits the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="collection">The collection.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.Areas.Admin.Controllers.ForumsController.Delete(System.Int32)">
+            <summary>
+            Deletes the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.Areas.Admin.Controllers.ForumsController.Delete(System.Int32,System.Web.Mvc.FormCollection)">
+            <summary>
+            Deletes the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="collection">The collection.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.Areas.Admin.Controllers.HomeController.#ctor(Zanshin.Domain.Repositories.Interfaces.IEntityRepository{Zanshin.Domain.Entities.Website,System.Int32},Zanshin.Domain.Services.Interfaces.ICacheService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.Areas.Admin.Controllers.HomeController"/> class.
+            </summary>
+            <param name="websiteRepository">The website repository.</param>
+            <param name="cacheService">The cache service.</param>
+        </member>
+        <member name="M:Zanshin.Areas.Admin.Controllers.LogsController.#ctor(Zanshin.Domain.Repositories.Interfaces.IEntityRepository{Zanshin.Domain.Entities.Log,System.Int32})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.Areas.Admin.Controllers.LogsController"/> class.
+            </summary>
+            <param name="logRepository">The log repository.</param>
+        </member>
+        <member name="T:Zanshin.Areas.Forums.ForumsAreaRegistration">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="T:Zanshin.Areas.HelpPage.App_Start.HelpPageConfig">
+            <summary>
+            Use this class to customize the Help Page.
+            For example you can set a custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> to supply the documentation
+            or you can provide the samples for the requests/responses.
+            </summary>
+        </member>
+        <member name="T:Zanshin.Areas.HelpPage.Controllers.HelpController">
+            <summary>
+            The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+            Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+            Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForMediaType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Sets the sample directly for all actions with the specified media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator)">
+            <summary>
+            Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.HelpPageConfigurationExtensions.GetModelDescriptionGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>The <see cref="T:Zanshin.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator"/></returns>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            Gets the model that represents an API displayed on the help page. The model is initialized on the first call and cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription"/> ID.</param>
+            <returns>
+            An <see cref="T:Zanshin.Areas.HelpPage.Models.HelpPageApiModel"/>
+            </returns>
+        </member>
+        <member name="T:Zanshin.Areas.HelpPage.ModelDescriptions.ModelDescription">
+            <summary>
+            Describes a type model.
+            </summary>
+        </member>
+        <member name="T:Zanshin.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
+            <summary>
+            Generates model descriptions for given types.
+            </summary>
+        </member>
+        <member name="T:Zanshin.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="T:Zanshin.Areas.HelpPage.ModelDescriptions.ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="T:Zanshin.Areas.HelpPage.Models.HelpPageApiModel">
+            <summary>
+            The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.Models.HelpPageApiModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.Areas.HelpPage.Models.HelpPageApiModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+            Gets or sets the <see cref="P:Zanshin.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription"/> that describes the API.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.HelpPage.Models.HelpPageApiModel.UriParameters">
+            <summary>
+            Gets or sets the <see cref="T:Zanshin.Areas.HelpPage.ModelDescriptions.ParameterDescription"/> collection that describes the URI parameters for the API.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation">
+            <summary>
+            Gets or sets the documentation for the request.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription">
+            <summary>
+            Gets or sets the <see cref="T:Zanshin.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the request body.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters">
+            <summary>
+            Gets the request body parameter descriptions.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription">
+            <summary>
+            Gets or sets the <see cref="T:Zanshin.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the resource.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties">
+            <summary>
+            Gets the resource property descriptions.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+            Gets the sample requests associated with the API.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+            Gets the sample responses associated with the API.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+            Gets the error messages associated with this model.
+            </summary>
+        </member>
+        <member name="T:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator">
+            <summary>
+            This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator"/> class.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+            Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+            Gets the objects that are used directly as samples for certain actions.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+            Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.SampleObjectFactories">
+            <summary>
+            Gets factories for the objects that the supported formatters will serialize as samples. Processed in order,
+            stopping when the factory successfully returns a non-<see langref="null"/> object.
+            </summary>
+            <remarks>
+            Collection includes just <see cref="M:Zanshin.Areas.HelpPage.SampleGeneration.ObjectGenerator.GenerateObject(System.Type)"/> initially. Use
+            <code>SampleObjectFactories.Insert(0, func)</code> to provide an override and
+            <code>SampleObjectFactories.Add(func)</code> to provide a fallback.</remarks>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,Zanshin.Areas.HelpPage.SampleGeneration.SampleDirection)">
+            <summary>
+            Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,Zanshin.Areas.HelpPage.SampleGeneration.SampleDirection)">
+            <summary>
+            Search for samples that are provided directly through <see cref="P:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.ActionSamples"/>.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+            Gets the sample object that will be serialized by the formatters. 
+            First, it will look at the <see cref="P:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
+            one using <see cref="M:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.DefaultSampleObjectFactory(Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:Zanshin.Areas.HelpPage.SampleGeneration.ObjectGenerator"/>) and other
+            factories in <see cref="P:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.SampleObjectFactories"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.ResolveHttpRequestMessageType(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Resolves the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},Zanshin.Areas.HelpPage.SampleGeneration.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+            Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleKey">
+            <summary>
+            This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Creates a new <see cref="T:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleKey"/> based on media type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Creates a new <see cref="T:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleKey"/> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.#ctor(Zanshin.Areas.HelpPage.SampleGeneration.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleKey"/> based on <see cref="P:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,Zanshin.Areas.HelpPage.SampleGeneration.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleKey"/> based on media type, <see cref="P:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="P:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.ControllerName">
+            <summary>
+            Gets the name of the controller.
+            </summary>
+            <value>
+            The name of the controller.
+            </value>
+        </member>
+        <member name="P:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.ActionName">
+            <summary>
+            Gets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="P:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.MediaType">
+            <summary>
+            Gets the media type.
+            </summary>
+            <value>
+            The media type.
+            </value>
+        </member>
+        <member name="P:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.ParameterNames">
+            <summary>
+            Gets the parameter names.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.SampleDirection">
+            <summary>
+            Gets the <see cref="P:Zanshin.Areas.HelpPage.SampleGeneration.HelpPageSampleKey.SampleDirection"/>.
+            </summary>
+        </member>
+        <member name="T:Zanshin.Areas.HelpPage.SampleGeneration.ImageSample">
+            <summary>
+            This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.SampleGeneration.ImageSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.Areas.HelpPage.SampleGeneration.ImageSample"/> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+        </member>
+        <member name="T:Zanshin.Areas.HelpPage.SampleGeneration.InvalidSample">
+            <summary>
+            This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:Zanshin.Areas.HelpPage.SampleGeneration.ObjectGenerator">
+            <summary>
+            This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.SampleGeneration.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+            Generates an object for a given type. The type needs to be public, have a public default constructor and settable public properties/fields. Currently it supports the following types:
+            Simple types: <see cref="T:System.Int32"/>, <see cref="T:System.String"/>, <see cref="T:System.Enum"/>, <see cref="T:System.DateTime"/>, <see cref="T:System.Uri"/>, etc.
+            Complex types: POCO types.
+            Nullables: <see cref="T:System.Nullable`1"/>.
+            Arrays: arrays of simple types or complex types.
+            Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2"/>
+            Tuples: <see cref="T:System.Tuple`1"/>, <see cref="T:System.Tuple`2"/>, etc
+            Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2"/> or anything deriving from <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            Collections: <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.IEnumerable`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/>, <see cref="T:System.Collections.IList"/>, <see cref="T:System.Collections.IEnumerable"/>, <see cref="T:System.Collections.ICollection"/> or anything deriving from <see cref="T:System.Collections.Generic.ICollection`1"/> or <see cref="T:System.Collections.IList"/>.
+            Queryables: <see cref="T:System.Linq.IQueryable"/>, <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="T:Zanshin.Areas.HelpPage.SampleGeneration.SampleDirection">
+            <summary>
+            Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="T:Zanshin.Areas.HelpPage.SampleGeneration.TextSample">
+            <summary>
+            This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:Zanshin.Areas.HelpPage.XmlDocumentationProvider">
+            <summary>
+            A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.HelpPage.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.Areas.HelpPage.XmlDocumentationProvider"/> class.
+            </summary>
+            <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="T:Zanshin.Areas.RouteDebugger.Components.ActionSelectSimulator">
+            <summary>
+            Simulate the action selection and record the decision making process.
+            
+            This class is basically a copy of default IHttpActionSelector implementation (DefaultActionSelector) private members,
+            and methods where we have included logging.
+            The private members of the DefaultActionSelector are copied here, so we can access them.
+            
+            Some help internal help classes are also copied to assist the process,
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.RouteDebugger.Components.ActionSelectSimulator.Simulate(System.Web.Http.Controllers.HttpControllerContext)">
+            <summary>
+            Simulating the action selecting process. It mimics the ASP.NET Web API internal logic
+            </summary>
+            <param name="controllerContext">The controller context.</param>
+            <returns>A structure contains the log of selecting process</returns>
+        </member>
+        <member name="M:Zanshin.Areas.RouteDebugger.Components.ActionSelectSimulator.FindActionsForVerb(System.Net.Http.HttpMethod)">
+            <summary>
+            This is a copy of the private ApiControllerActionSelector.FindActionsForVerb. It doesn't use the cache
+            but copies the contents of the FindActionsForVerbWorker method.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.RouteDebugger.Components.ActionSelectSimulator.FindActionUsingRouteAndQueryParameters(System.Web.Http.Controllers.HttpControllerContext,System.Collections.Generic.IEnumerable{System.Web.Http.Controllers.ReflectedHttpActionDescriptor},System.Boolean)">
+            <summary>
+            This is an exact copy from ApiControllerActionSelector.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.RouteDebugger.Components.ActionSelectSimulator.IsValidActionMethod(System.Reflection.MethodInfo)">
+            <summary>
+            This is an exact copy from ApiControllerActionSelector.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.RouteDebugger.Components.ActionSelectSimulator.IsSubset(System.String[],System.Collections.Generic.HashSet{System.String})">
+            <summary>
+            This is an exact copy from ApiControllerActionSelector.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.RouteDebugger.Components.ActionSelectSimulator.RunSelectionFilters(System.Web.Http.Controllers.HttpControllerContext,System.Collections.Generic.IEnumerable{System.Web.Http.Controllers.HttpActionDescriptor})">
+            <summary>
+            Replace the private method from ApiControllerActionSelector.
+            
+            The IActionMethodSelector interface used in the method is internal so we must make a copy. 
+            CacheAttrsIActionMethodSelector is also internal.
+            The default implementation of IActionMethodSelector finds methods marked with the NonActionAttribute, so the
+            code below is converted to directly filter out methods with that attribute.
+            </summary>
+        </member>
+        <member name="T:Zanshin.Areas.RouteDebugger.Components.DictionaryExtensions">
+            <summary>
+            An exact copy of the TryGetValue method from  DictionaryExtensions.cs.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.RouteDebugger.Components.DictionaryExtensions.TryGetValue``1(System.Collections.Generic.IDictionary{System.String,System.Object},System.String,``0@)">
+            <summary>
+            Gets the value of <typeparamref name="T"/> associated with the specified key or <c>default</c> value if
+            either the key is not present or the value is not of type <typeparamref name="T"/>. 
+            </summary>
+            <typeparam name="T">The type of the value associated with the specified key.</typeparam>
+            <param name="dictionary">The <see cref="T:System.Collections.Generic.IDictionary`2"/> instance where <c>TValue</c> is <c>object</c>.</param>
+            <param name="key">The key whose value to get.</param>
+            <param name="value">When this method returns, the value associated with the specified key, if the key is found; otherwise, the default value for the type of the value parameter.</param>
+            <returns><c>true</c> if key was found, value is non-null, and value is of type <typeparamref name="T"/>; otherwise false.</returns>
+        </member>
+        <member name="T:Zanshin.Areas.RouteDebugger.Components.HttpParameterBindingExtensions">
+            <summary>
+            A copy of HttpParameterBindingExtensions.cs with one change. HttpParameterBindingExtensions.WillReadUri calls the internal
+            interface IUriValueProvderFactory, so that code is also in this method.
+            </summary>
+        </member>
+        <member name="T:Zanshin.Areas.RouteDebugger.Components.TypeHelper">
+            <summary>
+            A static class that provides various <see cref="T:System.Type"/> related helpers.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.RouteDebugger.Components.TypeHelper.GetTaskInnerTypeOrNull(System.Type)">
+            <summary>
+            Gets the task inner type or null.
+            </summary>
+            <param name="type">The type.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">type</exception>
+        </member>
+        <member name="M:Zanshin.Areas.RouteDebugger.Components.TypeHelper.OfType``1(System.Object[])">
+            <summary>
+            Fast implementation to get the subset of a given type.
+            </summary>
+            <typeparam name="T">type to search for</typeparam>
+            <returns>subset of objects that can be assigned to T</returns>
+        </member>
+        <member name="T:Zanshin.Areas.RouteDebugger.InspectActionInvoker">
+            <summary>
+            Hijacks the original invoker. It examines the header before 
+            executing the action. If the inspect header exists, returns the inspection data in a 200 response.
+            If the inspection header does not exist, the delegate calls the default InvokeActionAsync method.
+            
+            The inspection data saved in the request property are collected when the request is passed
+            along the stack.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.RouteDebugger.InspectActionInvoker.#ctor(System.Web.Http.Controllers.IHttpActionInvoker)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.Areas.RouteDebugger.InspectActionInvoker"/> class.
+            </summary>
+            <param name="innerInvoker">The inner invoker.</param>
+        </member>
+        <member name="M:Zanshin.Areas.RouteDebugger.InspectActionInvoker.InvokeActionAsync(System.Web.Http.Controllers.HttpActionContext,System.Threading.CancellationToken)">
+            <summary>
+            Executes asynchronously the HTTP operation.
+            </summary>
+            <param name="actionContext">The execution context.</param>
+            <param name="cancellationToken">The cancellation token assigned for the HTTP operation.</param>
+            <returns>
+            The newly started task.
+            </returns>
+        </member>
+        <member name="T:Zanshin.Areas.RouteDebugger.InspectActionSelector">
+             <summary>
+             This class replaces ApiControllerActionSelector (it's hooked up in RouteDebuggerConfig.cs). 
+             It uses  _innerSelector to call into ApiControllerActionSelector methods and it calls ActionSelectSimulator methods.
+             Private members of ApiControllerActionSelector cannot be called with a delegate, so a copy of the private members of
+             ApiControllerActionSelector are contained in the class ActionSelectSimulator.
+            
+             See http://www.asp.net/web-api/overview/web-api-routing-and-actions/routing-and-action-selection for more info.   
+             
+              The SelectAction method examines the request header. If an inspection header is found, it runs the 
+              action selection simulator, saves the inspection data in the request property, then uses the delegate
+              to run the ApiControllerActionSelector.SelectAction method.
+             </summary>
+        </member>
+        <member name="T:Zanshin.Areas.RouteDebugger.InspectControllerSelector">
+            <summary>
+            This class replaces the DefaultHttpControllerSelector (see RouteDebuggerConfig.cs).  
+            It uses _innerSelector to call into DefaultHttpControllerSelector methods.
+            See http://www.asp.net/web-api/overview/web-api-routing-and-actions/routing-and-action-selection for more info.
+            
+            The SelectController method examines the request header. If an inspection header is found:
+                1. Saves all candidate controllers in inspection data.
+                2. Marks the selected controller.
+            </summary>
+        </member>
+        <member name="T:Zanshin.Areas.RouteDebugger.InspectHandler">
+            <summary>
+            Inspect handler saves route inspect data and handler error.
+            
+            If a request has inspect header, the handler will save all routes and route data to inspect data.
+            
+            If the return response is not 200. That may cause by 500 or 404, handler extract Inspect data from
+            request property and set back the the response. The original response status is saved to the inspect 
+            data and actual return response is always 200.
+            </summary>
+        </member>
+        <member name="T:Zanshin.Areas.RouteDebugger.Models.ActionSelectionInfo">
+            <summary>
+            Representing one action selection
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.RouteDebugger.Models.ActionSelectionInfo.FoundByActionName">
+            <summary>
+            Is this action selected based on its action name?
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.RouteDebugger.Models.ActionSelectionInfo.FoundByActionNameWithRightVerb">
+            <summary>
+            Is this action selected based on its action name and its supported http verb?
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.RouteDebugger.Models.ActionSelectionInfo.FoundByVerb">
+            <summary>
+            Is this action selected based on its supported http verb?
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.RouteDebugger.Models.ActionSelectionInfo.FoundWithRightParam">
+            <summary>
+            Do this action's parameters match the ones in query string?
+            </summary>
+        </member>
+        <member name="P:Zanshin.Areas.RouteDebugger.Models.ActionSelectionInfo.FoundWithSelectorsRun">
+            <summary>
+            Is this action finally selected by selection attribute?
+            </summary>
+        </member>
+        <member name="T:Zanshin.Areas.RouteDebugger.Models.ActionSelectionLog">
+            <summary>
+            Logs information collected when ActionSelectSimulator.Simulate is called. 
+            ActionSelectSimulator.Simulate replaces DefaultActionSelector.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.RouteDebugger.Models.ActionSelectionLog.MarkSelected(System.Collections.Generic.IEnumerable{System.Web.Http.Controllers.HttpActionDescriptor},System.Action{Zanshin.Areas.RouteDebugger.Models.ActionSelectionInfo})">
+            <summary>
+            Looks for related ActionSelectionInfo instances based on given action
+            descriptors. Invoke given marking functor on each of them.
+            
+            This method is used in action simulator when a selection decision is 
+            made in every stage, the selected action will be passed in along with
+            a marking functor. The marking functor usually set a particular boolean
+            property on related ActionSelectionInfo instance to mark that this action
+            is selected in particular stage.
+            </summary>
+            <param name="actions">The actions to be marked.</param>
+            <param name="marking">The functor picking the bool property of an action to be set to true.</param>
+        </member>
+        <member name="M:Zanshin.Areas.RouteDebugger.Models.ActionSelectionLog.MarkOthersSelected(System.Collections.Generic.IEnumerable{System.Web.Http.Controllers.HttpActionDescriptor},System.Action{Zanshin.Areas.RouteDebugger.Models.ActionSelectionInfo})">
+            <summary>
+            Counterpart of function MarkSelected, instead of marking selected action
+            this method mark unselected action.
+            </summary>
+            <param name="actions">the actions NOT to be marked</param>
+            <param name="marking">the functor picking the bool property of an action to be set to true.</param>
+        </member>
+        <member name="T:Zanshin.Areas.RouteDebugger.Models.HttpParameterDescriptorInfo">
+            <summary>
+            Represents the parameters.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.RouteDebugger.RequestHelper.IsInspectRequest(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Returns true if this request is a inspect request. 
+            
+            For sake of security only inspect request from local will be accepted.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Areas.RouteDebugger.RequestHelper.IsFromLocal(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Returns true if this request is from local
+            </summary>
+        </member>
+        <member name="T:Zanshin.Controllers.AccountController">
+            <summary>
+            The account controller.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.#ctor(Zanshin.Domain.Providers.Interfaces.IApplicationUserManager,Zanshin.Domain.Providers.Interfaces.IApplicationSignInManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.Controllers.AccountController"/> class.
+            </summary>
+            <param name="userManager">
+            The user manager.
+            </param>
+            <param name="signInManager">
+            The sign in manager.
+            </param>
+        </member>
+        <member name="P:Zanshin.Controllers.AccountController.UserManager">
+            <summary>
+            Gets the user manager.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Controllers.AccountController.SignInManager">
+            <summary>
+            Gets the sign in manager.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.Login(System.String)">
+            <summary>
+            The login.
+            </summary>
+            <param name="returnUrl">
+            The return URL.
+            </param>
+            <returns>
+            The <see cref="T:System.Web.Mvc.ActionResult"/>.
+            </returns>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.Login(Zanshin.Domain.Models.Account.LoginViewModel,System.String)">
+            <summary>
+            The login.
+            </summary>
+            <param name="model">
+            The model.
+            </param>
+            <param name="returnUrl">
+            The return url.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.VerifyCode(System.String,System.String)">
+            <summary>
+            The verify code.
+            </summary>
+            <param name="provider">
+            The provider.
+            </param>
+            <param name="returnUrl">
+            The return url.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.VerifyCode(Zanshin.Domain.Models.Account.VerifyCodeViewModel)">
+            <summary>
+            The verify code.
+            </summary>
+            <param name="model">
+            The model.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.Register">
+            <summary>
+            The register.
+            </summary>
+            <returns>
+            The <see cref="T:System.Web.Mvc.ActionResult"/>.
+            </returns>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.Register(Zanshin.Domain.Models.Account.RegisterViewModel)">
+            <summary>
+            The register.
+            </summary>
+            <param name="model">
+            The model.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+            <exception cref="T:System.NotImplementedException">Always.</exception>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.ConfirmEmail(System.Int32,System.String)">
+            <summary>
+            The confirm email.
+            </summary>
+            <param name="userId">
+            The user id.
+            </param>
+            <param name="code">
+            The code.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.ForgotPassword">
+            <summary>
+            The forgot password.
+            </summary>
+            <returns>
+            The <see cref="T:System.Web.Mvc.ActionResult"/>.
+            </returns>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.ForgotPassword(Zanshin.Domain.Models.Account.ForgotPasswordViewModel)">
+            <summary>
+            The forgot password.
+            </summary>
+            <param name="model">
+            The model.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+            <exception cref="T:System.NotImplementedException">Always.</exception>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.ForgotPasswordConfirmation">
+            <summary>
+            The forgot password confirmation.
+            </summary>
+            <returns>
+            The <see cref="T:System.Web.Mvc.ActionResult"/>.
+            </returns>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.ResetPassword(System.String)">
+            <summary>
+            The reset password.
+            </summary>
+            <param name="code">
+            The code.
+            </param>
+            <returns>
+            The <see cref="T:System.Web.Mvc.ActionResult"/>.
+            </returns>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.ResetPassword(Zanshin.Domain.Models.Account.ResetPasswordViewModel)">
+            <summary>
+            The reset password.
+            </summary>
+            <param name="model">
+            The model.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.ResetPasswordConfirmation">
+            <summary>
+            The reset password confirmation.
+            </summary>
+            <returns>
+            The <see cref="T:System.Web.Mvc.ActionResult"/>.
+            </returns>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.ExternalLogin(System.String,System.String)">
+            <summary>
+            The external login.
+            </summary>
+            <param name="provider">
+            The provider.
+            </param>
+            <param name="returnUrl">
+            The return url.
+            </param>
+            <returns>
+            The <see cref="T:System.Web.Mvc.ActionResult"/>.
+            </returns>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.SendCode(System.String)">
+            <summary>
+            The send code.
+            </summary>
+            <param name="returnUrl">
+            The return URL.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.SendCode(Zanshin.Domain.Models.Account.SendCodeViewModel)">
+            <summary>
+            The send code.
+            </summary>
+            <param name="model">
+            The model.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.ExternalLoginCallback(System.String)">
+            <summary>
+            The external login callback.
+            </summary>
+            <param name="returnUrl">
+            The return url.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.ExternalLoginConfirmation(Zanshin.Domain.Models.Account.ExternalLoginConfirmationViewModel,System.String)">
+            <summary>
+            The external login confirmation.
+            </summary>
+            <param name="model">
+            The model.
+            </param>
+            <param name="returnUrl">
+            The return URL.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.LogOff">
+            <summary>
+            The log off.
+            </summary>
+            <returns>
+            The <see cref="T:System.Web.Mvc.ActionResult"/>.
+            </returns>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.ExternalLoginFailure">
+            <summary>
+            The external login failure.
+            </summary>
+            <returns>
+            The <see cref="T:System.Web.Mvc.ActionResult"/>.
+            </returns>
+        </member>
+        <member name="F:Zanshin.Controllers.AccountController.XsrfKey">
+            <summary>
+            The xsrf key.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Controllers.AccountController.AuthenticationManager">
+            <summary>
+            Gets the authentication manager.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.AddErrors(Microsoft.AspNet.Identity.IdentityResult)">
+            <summary>
+            The add errors.
+            </summary>
+            <param name="result">
+            The result.
+            </param>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.RedirectToLocal(System.String)">
+            <summary>
+            The redirect to local.
+            </summary>
+            <param name="returnUrl">
+            The return url.
+            </param>
+            <returns>
+            The <see cref="T:System.Web.Mvc.ActionResult"/>.
+            </returns>
+        </member>
+        <member name="T:Zanshin.Controllers.AccountController.ChallengeResult">
+            <summary>
+            The challenge result.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.ChallengeResult.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.Controllers.AccountController.ChallengeResult"/> class.
+            </summary>
+            <param name="provider">
+            The provider.
+            </param>
+            <param name="redirectUri">
+            The redirect uri.
+            </param>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.ChallengeResult.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.Controllers.AccountController.ChallengeResult"/> class.
+            </summary>
+            <param name="provider">
+            The provider.
+            </param>
+            <param name="redirectUri">
+            The redirect uri.
+            </param>
+            <param name="userId">
+            The user id.
+            </param>
+        </member>
+        <member name="P:Zanshin.Controllers.AccountController.ChallengeResult.LoginProvider">
+            <summary>
+            Gets or sets the login provider.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Controllers.AccountController.ChallengeResult.RedirectUri">
+            <summary>
+            Gets or sets the redirect uri.
+            </summary>
+        </member>
+        <member name="P:Zanshin.Controllers.AccountController.ChallengeResult.UserId">
+            <summary>
+            Gets or sets the user id.
+            </summary>
+        </member>
+        <member name="M:Zanshin.Controllers.AccountController.ChallengeResult.ExecuteResult(System.Web.Mvc.ControllerContext)">
+            <summary>
+            The execute result.
+            </summary>
+            <param name="context">
+            The context.
+            </param>
+        </member>
+        <member name="T:Zanshin.UserInterface">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Zanshin.UserInterface.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Zanshin.UserInterface.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Zanshin.UserInterface.ContactUs">
+            <summary>
+              Looks up a localized string similar to Contact.
+            </summary>
+        </member>
+        <member name="P:Zanshin.UserInterface.Forums">
+            <summary>
+              Looks up a localized string similar to Forums.
+            </summary>
+        </member>
+        <member name="P:Zanshin.UserInterface.Hello">
+            <summary>
+              Looks up a localized string similar to Hello .
+            </summary>
+        </member>
+        <member name="P:Zanshin.UserInterface.Home">
+            <summary>
+              Looks up a localized string similar to Home.
+            </summary>
+        </member>
+        <member name="P:Zanshin.UserInterface.Log_In">
+            <summary>
+              Looks up a localized string similar to Log in.
+            </summary>
+        </member>
+        <member name="P:Zanshin.UserInterface.LogOff">
+            <summary>
+              Looks up a localized string similar to LogOff.
+            </summary>
+        </member>
+        <member name="P:Zanshin.UserInterface.NameHeaderText">
+            <summary>
+              Looks up a localized string similar to Minnehaha Kendo Dojo ミネハハ.
+            </summary>
+        </member>
+        <member name="P:Zanshin.UserInterface.Ok">
+            <summary>
+              Looks up a localized string similar to Ok.
+            </summary>
+        </member>
+        <member name="P:Zanshin.UserInterface.Register">
+            <summary>
+              Looks up a localized string similar to Register.
+            </summary>
+        </member>
+        <member name="P:Zanshin.UserInterface.Topics">
+            <summary>
+              Looks up a localized string similar to Topics.
+            </summary>
+        </member>
+    </members>
+</doc>

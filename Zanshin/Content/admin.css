@@ -1,0 +1,66 @@
+﻿body {
+    padding-top: 5px;
+    padding-bottom: 20px;
+    background-color: #eee;
+}
+
+/* Hide background image on mobile */
+@media all and (max-width: 480px) {
+    html body {
+        background-image: none !important;
+        background-color: #ccc;
+    }
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+input, select, textarea {
+    max-width: 280px;
+}
+
+/* post */
+.quoted-post a:link {
+    color: # #105289;
+    text-decoration: none;
+}
+
+.quoted-post a:visited {
+    color: # #105289;
+    text-decoration: none;
+}
+
+.quoted-post a:hover {
+    color: #9c0533;
+}
+
+.quoted-post a:active {
+    color: #9c0533;
+}
+
+.quoted-post {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #C6E2EE;
+}
+.input-xs { 
+    width: 80px;
+    height: 34px;
+    padding: 6px 12px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.navbar { margin-bottom: 0px;}

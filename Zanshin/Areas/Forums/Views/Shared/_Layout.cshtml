@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html ng-app="zanshin">
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/flatly")
+    @Styles.Render("~/Content/forums-css")
+    @Styles.Render("~/Content/text-angular")
+    @RenderSection("head", required:false)
+</head>
+<body>
+    @Html.Partial("_NavPartial")
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Big Choppaz</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/text-angular")
+    @Scripts.Render("~/bundles/directives")
+    @Scripts.Render("~/bundles/forums")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

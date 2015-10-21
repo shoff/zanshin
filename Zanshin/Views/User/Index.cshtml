@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h2>Index</h2>
+<div ng-controller="userController">
+    <h2 ng-bind="post.PostTopic.Subject"></h2>
+    <input name="topicId" type="hidden" value="@ViewBag.TopicId" ng-model="post.TopicId" />
+    <input name="replyToPostId" type="hidden" value="@ViewBag.ReplyToPostId" ng-model="post.ReplyToPostId" />
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">angularForums.userId = '@ViewBag.UserId';</script>
+    <script src="~/Scripts/user/user.userService.js"></script>
+    <script src="~/Scripts/user/user.userController.js"></script>
+}

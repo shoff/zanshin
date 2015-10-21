@@ -1,0 +1,432 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Zanshin.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:Zanshin.WebApi.ApiModels.CategoryModel">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Zanshin.WebApi.ApiModels.CategoryForum">
+            <summary>
+            </summary> 
+        </member>
+        <member name="T:Zanshin.WebApi.BaseController`2">
+            <summary>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TK">The type of the k.</typeparam>
+        </member>
+        <member name="M:Zanshin.WebApi.BaseController`2.#ctor(Zanshin.Domain.Repositories.Interfaces.IEntityRepository{`0,`1})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.WebApi.BaseController`2"/> class.
+            </summary>
+            <param name="entityRepository">The entity repository.</param>
+        </member>
+        <member name="T:Zanshin.WebApi.CategoryController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Zanshin.WebApi.CategoryController.#ctor(Zanshin.Domain.Repositories.Interfaces.IEntityRepository{Zanshin.Domain.Entities.Forum.Category,System.Int32},Zanshin.Domain.Services.Interfaces.ICacheService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.WebApi.CategoryController" /> class.
+            </summary>
+            <param name="categoryRepository">The category repository.</param>
+            <param name="cacheService">The cache service.</param>
+        </member>
+        <member name="M:Zanshin.WebApi.CategoryController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.WebApi.CategoryController.GetById(System.Int32)">
+            <summary>
+            Gets the by identifier.
+            </summary>
+            <param name="categoryId">The category identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.WebApi.CategoryController.Post(Zanshin.Domain.Entities.Forum.Category)">
+            <summary>
+            Posts the specified category.
+            </summary>
+            <param name="category">The category.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Zanshin.WebApi.Filters.CheckModelForNullAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Zanshin.WebApi.Filters.CheckModelForNullAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.WebApi.Filters.CheckModelForNullAttribute"/> class.
+            </summary>
+        </member>
+        <member name="M:Zanshin.WebApi.Filters.CheckModelForNullAttribute.#ctor(System.Func{System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.WebApi.Filters.CheckModelForNullAttribute"/> class.
+            </summary>
+            <param name="checkCondition">The check condition.</param>
+        </member>
+        <member name="M:Zanshin.WebApi.Filters.CheckModelForNullAttribute.OnActionExecuting(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            Occurs before the action method is invoked.
+            </summary>
+            <param name="actionContext">The action context.</param>
+        </member>
+        <member name="T:Zanshin.WebApi.Filters.ValidateModelStateAttribute">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Zanshin.WebApi.Filters.ValidateModelStateAttribute.OnActionExecuting(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            Occurs before the action method is invoked.
+            </summary>
+            <param name="actionContext">The action context.</param>
+        </member>
+        <member name="T:Zanshin.WebApi.ForumController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Zanshin.WebApi.ForumController.#ctor(Zanshin.Domain.Repositories.Interfaces.IEntityRepository{Zanshin.Domain.Entities.Forum.Forum,System.Int32})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.WebApi.ForumController"/> class.
+            </summary>
+            <param name="forumRepository">
+            The forum repository.
+            </param>
+        </member>
+        <member name="M:Zanshin.WebApi.ForumController.Get">
+            <summary>
+            Gets a collection of <seealso cref="T:Zanshin.Domain.Entities.Forum.Forum" />
+            </summary>
+            <returns>
+            IEnumerable&lt;Forum&gt;
+            </returns>
+        </member>
+        <member name="M:Zanshin.WebApi.ForumController.GetById(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets the by identifier.
+            </summary>
+            <param name="forumId">The forum identifier.</param>
+            <param name="pageNumber">The page number.</param>
+            <param name="pagesize">The page size.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.WebApi.ForumController.Post(Zanshin.Domain.Entities.Forum.Forum)">
+            <summary>
+            Posts the specified forum.
+            </summary>
+            <param name="forum">
+            The forum.
+            </param>
+            <response code="201">Forum created</response>
+            <response code="400">Forum name already in use</response>
+            <returns>
+            </returns>
+            <exception cref="T:System.Web.Http.HttpResponseException">
+            Condition. 
+            </exception>
+        </member>
+        <member name="M:Zanshin.WebApi.ForumController.Put(System.Int32,Zanshin.Domain.Entities.Forum.Forum)">
+            <summary>
+            Puts the specified identifier.
+            </summary>
+            <param name="forumId">
+            The forum identifier.
+            </param>
+            <param name="forum">
+            The value.
+            </param>
+            <returns>
+            </returns>
+        </member>
+        <member name="M:Zanshin.WebApi.ForumController.Delete(System.Int32)">
+            <summary>
+            Deletes the specified identifier.
+            </summary>
+            <param name="forumId">
+            The identifier.
+            </param>
+            <returns>
+            </returns>
+        </member>
+        <member name="T:Zanshin.WebApi.GroupController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Zanshin.WebApi.GroupController.#ctor(Zanshin.Domain.Repositories.Interfaces.IEntityRepository{Zanshin.Domain.Entities.Forum.Group,System.Int32},Zanshin.Domain.Services.Interfaces.ICacheService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.WebApi.GroupController" /> class.
+            </summary>
+            <param name="groupsRepository">The groups repository.</param>
+            <param name="cacheService">The cache service.</param>
+        </member>
+        <member name="M:Zanshin.WebApi.GroupController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.WebApi.GroupController.Put(System.Int32,Zanshin.Domain.Entities.Forum.Group)">
+            <summary>
+            Puts the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="group">The group.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Zanshin.WebApi.GroupUsersController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Zanshin.WebApi.GroupUsersController.#ctor(Zanshin.Domain.Repositories.Interfaces.IEntityRepository{Zanshin.Domain.Entities.Forum.Group,System.Int32},Zanshin.Domain.Repositories.Interfaces.IEntityRepository{Zanshin.Domain.Entities.Identity.User,System.Int32})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.WebApi.GroupUsersController" /> class.
+            </summary>
+            <param name="groupRepository">The group repository.</param>
+            <param name="userRepository">The user repository.</param>
+        </member>
+        <member name="M:Zanshin.WebApi.GroupUsersController.Get(System.Int32)">
+            <summary>
+            Gets the specified group identifier.
+            </summary>
+            <param name="groupId">The group identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.WebApi.GroupUsersController.GetMembers(System.Int32)">
+            <summary>
+            Gets the specified group identifier.
+            </summary>
+            <param name="groupId">The group identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.WebApi.GroupUsersController.PostAdmin(System.Int32,System.Int32)">
+            <summary>
+            Posts the admin.
+            </summary>
+            <param name="groupId">The group identifier.</param>
+            <param name="userId">The user identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Zanshin.WebApi.Messages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Zanshin.WebApi.Messages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Zanshin.WebApi.Messages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Zanshin.WebApi.Messages.DescriptionRequired">
+            <summary>
+              Looks up a localized string similar to Description is required..
+            </summary>
+        </member>
+        <member name="P:Zanshin.WebApi.Messages.DuplicateForumName">
+            <summary>
+              Looks up a localized string similar to There is already a forum named {0}, please choose a unique forum name..
+            </summary>
+        </member>
+        <member name="P:Zanshin.WebApi.Messages.NameRequired">
+            <summary>
+              Looks up a localized string similar to Name is required..
+            </summary>
+        </member>
+        <member name="T:Zanshin.WebApi.PostController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Zanshin.WebApi.PostController.postRepository">
+            <summary>
+            The post repository
+            </summary>
+        </member>
+        <member name="M:Zanshin.WebApi.PostController.#ctor(Zanshin.Domain.Repositories.Interfaces.IEntityRepository{Zanshin.Domain.Entities.Forum.Post,System.Int32},Zanshin.Domain.Repositories.Interfaces.IEntityRepository{Zanshin.Domain.Entities.Forum.Topic,System.Int32},Zanshin.Domain.Repositories.Interfaces.IEntityRepository{Zanshin.Domain.Entities.Identity.User,System.Int32})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.WebApi.PostController" /> class.
+            </summary>
+            <param name="postRepository">The post repository.</param>
+            <param name="topicRepository">The topic repository.</param>
+            <param name="userRepository">The user repository.</param>
+        </member>
+        <member name="M:Zanshin.WebApi.PostController.Get(System.Int32,System.Int32)">
+            <summary>
+            Gets posts belonging to the specified TopicId
+            </summary>
+            <param name="topicId">The topic identifier.</param>
+            <param name="replyTo">The reply to.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.WebApi.PostController.Get(System.Int32)">
+            <summary>
+            Gets the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.WebApi.PostController.Post(Zanshin.Domain.Entities.Forum.Post)">
+            <summary>
+            Posts the specified value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Zanshin.WebApi.PostController.Put(System.Int32,Zanshin.Domain.Entities.Forum.Post)">
+            <summary>
+            Puts the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Zanshin.WebApi.PostController.Delete(System.Int32)">
+            <summary>
+            Deletes the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Zanshin.WebApi.Services.ForumService">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Zanshin.WebApi.Services.ForumService.#ctor(Zanshin.Domain.Repositories.Interfaces.IEntityRepository{Zanshin.Domain.Entities.Forum.Forum,System.Int32},Zanshin.Domain.Repositories.Interfaces.IEntityRepository{Zanshin.Domain.Entities.Forum.Topic,System.Int32},Zanshin.Domain.Repositories.Interfaces.IEntityRepository{Zanshin.Domain.Entities.Forum.Post,System.Int32})">
+            <summary>Initializes a new instance of the <see cref="T:Zanshin.WebApi.Services.ForumService" /> class.</summary>
+            <param name="forumRepository">The forum repository.</param>
+            <param name="topicRepository">The topic repository.</param>
+            <param name="postRepository">The post repository.</param>
+        </member>
+        <member name="M:Zanshin.WebApi.Services.ForumService.NameValid(System.String)">
+            <summary>
+            Determines if the requested name is in available and valid
+            </summary>
+            <param name="forumName">Name of the forum.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">forumName</exception>
+        </member>
+        <member name="M:Zanshin.WebApi.Services.IForumService.NameValid(System.String)">
+            <summary>
+            Determines if the requested name is in available and valid
+            </summary>
+            <param name="forumName">Name of the forum.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.WebApi.Services.IUserService.UpdatePostCount(System.Int32)">
+            <summary>Updates the post count.</summary>
+            <param name="userId">The user identifier.</param>
+        </member>
+        <member name="M:Zanshin.WebApi.Services.IUserService.UpdateTopicCount(System.Int32)">
+            <summary>Updates the topic count.</summary>
+            <param name="userId">The user identifier.</param>
+        </member>
+        <member name="M:Zanshin.WebApi.Services.UserService.#ctor(Zanshin.Domain.Repositories.Interfaces.IEntityRepository{Zanshin.Domain.Entities.Identity.User,System.Int32})">
+            <summary>Initializes a new instance of the <see cref="T:Zanshin.WebApi.Services.UserService"/> class.</summary>
+            <param name="userRepository">The user repository.</param>
+        </member>
+        <member name="M:Zanshin.WebApi.Services.UserService.UpdatePostCount(System.Int32)">
+            <summary>Updates the post count.</summary>
+            <param name="userId">The user identifier.</param>
+        </member>
+        <member name="M:Zanshin.WebApi.Services.UserService.UpdateTopicCount(System.Int32)">
+            <summary>Updates the topic count.</summary>
+            <param name="userId">The user identifier.</param>
+        </member>
+        <member name="T:Zanshin.WebApi.TopicController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Zanshin.WebApi.TopicController.#ctor(Zanshin.Domain.Repositories.Interfaces.IEntityRepository{Zanshin.Domain.Entities.Forum.Topic,System.Int32},Zanshin.Domain.Services.Interfaces.ICacheService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.WebApi.TopicController" /> class.
+            </summary>
+            <param name="topicRepository">The topic repository.</param>
+            <param name="cacheService">The cache service.</param>
+        </member>
+        <member name="M:Zanshin.WebApi.TopicController.Get(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets the specified topicid.
+            </summary>
+            <param name="topicid">The topicid.</param>
+            <param name="pageNumber">The page number.</param>
+            <param name="pagesize">The page size.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.WebApi.TopicController.Post(Zanshin.Domain.Entities.Forum.Topic)">
+            <summary>
+            Posts the specified topic.
+            </summary>
+            <param name="topic">The topic.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.WebApi.TopicController.Put(System.Int32,Zanshin.Domain.Entities.Forum.Topic)">
+            <summary>
+            Puts the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Zanshin.WebApi.TopicController.Delete(System.Int32)">
+            <summary>
+            Deletes the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="T:Zanshin.WebApi.UserController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Zanshin.WebApi.UserController.#ctor(Zanshin.Domain.Repositories.Interfaces.IEntityRepository{Zanshin.Domain.Entities.Identity.User,System.Int32},Zanshin.Domain.Services.Interfaces.ICacheService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zanshin.WebApi.UserController" /> class.
+            </summary>
+            <param name="userRepository">The user repository.</param>
+            <param name="cacheService">The cache service.</param>
+        </member>
+        <member name="M:Zanshin.WebApi.UserController.Get(System.Nullable{System.Int32})">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.WebApi.UserController.Get(System.Int32)">
+            <summary>
+            Gets the specified user identifier.
+            </summary>
+            <param name="userId">The user identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.WebApi.UserController.Post(Zanshin.Domain.Entities.Identity.User)">
+            <summary>
+            Posts the specified user.
+            </summary>
+            <param name="user">The user.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.WebApi.UserController.Put(System.Int32,Zanshin.Domain.Entities.Identity.User)">
+            <summary>
+            Puts the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="user">The user.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Zanshin.WebApi.UserController.Delete(System.Int32,Zanshin.Domain.Entities.Identity.User)">
+            <summary>
+            Deletes the specified identifier.
+            </summary>
+            <param name="user">The user.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,129 @@
+﻿<div ng-controller="forumController" class="row">
+    <ol class="breadcrumb">
+        <li><a href="/">home</a></li>
+        <li><a href="/Forums">forums</a></li>
+        <li><a ng-cloak href="/Forums/{{forum.forumId}}" ng-bind="forum.name"></a></li>
+    </ol>
+    <button class="btn btn-lg btn-primary" ng-show="!postsLoaded">
+        <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...
+    </button>
+    <div class="panel panel-default widget" ng-cloak>
+        <div class="panel-heading">
+            <h2 class="pull-right" ng-bind="forum.name"></h2>
+            <span class="kendo-glyph glyphicon glyphicon-comment"></span>
+            <h3 class="panel-title">Forum Information</h3>
+            Topic count: <strong><span ng-bind="forum.topicCount"></span></strong>
+            Post count: <strong><span ng-bind="forum.postCount"></span></strong>
+        </div>
+        <div class="panel-body">
+            
+            <ul class="pagination" ng-cloak>
+                <li ng-show="forum.pagedTopics.hasPreviousPage">
+                    <a ng-href="/Forums/{{forum.forumId}}?pageNumber={{forum.pagedTopics.pageNumber-1}}">prev</a>
+                </li>
+                <li ng-repeat="pagedNumber in forum.pagedTopics.pageArray" ng-class="{'active': currentPage === pagedNumber }">
+                    <a ng-href="/Forums/{{forum.forumId}}?pageNumber={{pagedNumber}}" ng-cloak ng-bind="pagedNumber"></a>
+                </li>
+                <li ng-show="forum.pagedTopics.hasNextPage">
+                    <a ng-href="/Forums/{{forum.forumId}}?pageNumber={{forum.pagedTopics.pageNumber+1}}">next</a>
+                </li>
+            </ul>
+
+            <ul class="list-group">
+                <li ng-repeat="topic in forum.pagedTopics.currentPage" class="list-group-item">
+                    <div class="row">
+                        <div class="col-xs-2 col-md-1">
+                            <img ng-src="{{topic.createdBy.userIcon.file}}" class="img-circle img-responsive" alt="" />
+                        </div>
+                        <div class="col-xs-10 col-md-11">
+                            <div>
+                                <a ng-href="/Forums/Posts/{{topic.topicId}}" ng-bind="topic.subject"></a>
+                                <div class="mic-info">
+                                    By: <a ng-href="#" ng-bind="topic.topicStarterName"></a> on <span ng-bind="topic.createdDate"></span>
+                                </div>
+                            </div>
+                            <div class="comment-text">
+                                Post count: <strong><span ng-bind="topic.postCount"></span></strong>
+                                Views: <strong><span ng-bind="topic.views"></span></strong>
+                            </div>
+                            <div class="action">
+                                <button type="button" class="btn btn-primary btn-xs" title="Edit">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-xs" title="Approved">
+                                    <span class="glyphicon glyphicon-ok"></span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-xs" title="Delete">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="pagination" ng-cloak>
+                <li ng-show="forum.pagedTopics.hasPreviousPage">
+                    <a ng-href="/Forums/{{forum.forumId}}?pageNumber={{forum.pagedTopics.pageNumber-1}}">prev</a>
+                </li>
+                <li ng-repeat="pagedNumber in forum.pagedTopics.pageArray" ng-class="{'active': currentPage === pagedNumber }">
+                    <a ng-href="/Forums/{{forum.forumId}}?pageNumber={{pagedNumber}}" ng-cloak ng-bind="pagedNumber"></a>
+                </li>
+                <li ng-show="forum.pagedTopics.hasNextPage">
+                    <a ng-href="/Forums/{{forum.forumId}}?pageNumber={{forum.pagedTopics.pageNumber+1}}">next</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="panel panel-default widget">
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-comment"></span>
+            <h3 class="panel-title">
+                Recent Comments
+            </h3>
+            <span class="label label-info">
+                78
+            </span>
+        </div>
+        <div class="panel-body">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-xs-2 col-md-1">
+                            <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" />
+                        </div>
+                        <div class="col-xs-10 col-md-11">
+                            <div>
+                                <a href="http://www.jquery2dotnet.com/2013/10/google-style-login-page-desing-usign.html">
+                                    Google Style Login Page Design Using Bootstrap
+                                </a>
+                                <div class="mic-info">
+                                    By: <a href="#">Bhaumik Patel</a> on 2 Aug 2013
+                                </div>
+                            </div>
+                            <div class="comment-text">
+                                Awesome design
+                            </div>
+                            <div class="action">
+                                <button type="button" class="btn btn-primary btn-xs" title="Edit">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </button>
+                                <button type="button" class="btn btn-success btn-xs" title="Approved">
+                                    <span class="glyphicon glyphicon-ok"></span>
+                                </button>
+                                <button type="button" class="btn btn-danger btn-xs" title="Delete">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> More</a>
+        </div>
+    </div>
+</div>

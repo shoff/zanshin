@@ -1,0 +1,51 @@
+﻿@using Zanshin.Areas.Admin
+<div ng-controller="categoryController">
+    <!-- column 2 -->
+    <ul class="list-inline pull-right">
+        <li><a href="#"><i class="glyphicon glyphicon-cog"></i></a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-comment"></i><span class="count">3</span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">1. Is there a way..</a></li>
+                <li><a href="#">2. Hello, admin. I would..</a></li>
+                <li><a href="#"><strong>All messages</strong></a></li>
+            </ul>
+        </li>
+        <li><a href="#"><i class="glyphicon glyphicon-user"></i></a></li>
+        <li><a title="Add Widget" data-toggle="modal" href="#addWidgetModal"><span class="glyphicon glyphicon-plus-sign"></span> Add Widget</a></li>
+    </ul>
+    <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>
+    <hr>
+    <h2>@AdminResources.ForumAdmin</h2>
+
+    <div class="panel panel-default" ng-repeat="c in categories" ng-cloak>
+        <div class="panel-heading" ng-cloak>
+            <div class="pull-right small text-info" ng-cloak>
+                <span>Created On: {{c.dateCreated | date:'MM/dd/yyyy'}}</span><br />
+                <span>Last updated: {{c.lastUpdated | date:'MM/dd/yyyy'}}</span>
+            </div>
+            <h4 ng-cloak>{{ c.name }}</h4>
+            <span class="small text-info" ng-cloak>{{ c.categoryDescription }}</span>
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Topics</th>
+                        <th>Posts</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="f in c.forums" ng-cloak>
+                        <td><a href="/admin/Forums/{{ f.forumId }}">{{f.name}}</a></td>
+                        <td ng-bind="f.forumDescription"></td>
+                        <td ng-bind="f.topicCount"></td>
+                        <td ng-bind="f.postCount"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

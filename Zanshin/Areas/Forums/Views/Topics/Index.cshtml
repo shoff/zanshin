@@ -1,0 +1,74 @@
+﻿@section head{
+    <style>
+        p { margin: 0 0 0 0; }
+    </style>
+}
+<zan-bread-crumb></zan-bread-crumb>
+
+<div ng-controller="topicController" ng-cloak>
+
+    <div class="row postRow img-rounded" ng-repeat="post in topic.pagedPosts.currentPage" ng-cloak>
+        <div class="col-xs-8">
+            <div class="box-title" ng-cloak>{{ post.subject }}</div>
+            <div ng-cloak>{{ post.dateCreated | date:'MM/dd/yyyy' }}</div>
+            <div ng-cloak>{{ post.content }}</div>
+            <div ng-cloak>karma: {{ post.postKarma }}</div>
+        </div>
+
+        <div class="col-xs-3 poster-info" style="vertical-align: top;">
+            <div ng-cloak>{{ post.poster.userName }}</div>
+            <div ng-cloak><img src="{{ post.poster.userIcon.file }}" /></div>
+            <div ng-cloak>karma: {{ poster.karma}}</div>
+        </div>
+
+    </div>
+
+
+    <!-- editor -->
+
+    <div class="row" style="padding-bottom: 10px;">
+        <div class="pull-left col-md-9">
+            <label for="topicSubject">Subject</label>
+            <input type="text" name="topicSubject" ng-model="postSubject" id="topicSubject" style="width:600px; margin-left: 10px; padding-left: 2px;" />
+        </div>
+    </div>
+    <div class="row">
+        <div id="smiley-box" class="pull-right col-md-3">
+            <strong>Smilies</strong><br>
+            <div style="padding-bottom: 20px;">
+                <a href="" ng-click="addSmile(':D', editorText)"><img src="/images/Smiles/icon_e_biggrin.gif" width="15" height="17" alt=":D" title="Very Happy"></a>
+                <a href="" ng-click="addSmile(':)', editorText)"><img src="/images/Smiles/icon_e_smile.gif" width="15" height="17" alt=":)" title="Smile"></a>
+                <a href="" ng-click="addSmile(';)', editorText)"><img src="/images/Smiles/icon_e_wink.gif" width="15" height="17" alt=";)" title="Wink"></a>
+                <a href="" ng-click="addSmile(':(', editorText)"><img src="/images/Smiles/icon_e_sad.gif" width="15" height="17" alt=":(" title="Sad"></a>
+                <a href="" ng-click="addSmile(':o', editorText)"><img src="/images/Smiles/icon_e_surprised.gif" width="15" height="17" alt=":o" title="Surprised"></a>
+                <a href="" ng-click="addSmile(':shock:', editorText)"><img src="/images/Smiles/icon_eek.gif" width="15" height="17" alt=":shock:" title="Shocked"></a>
+                <a href="" ng-click="addSmile(':?', editorText)"><img src="/images/Smiles/icon_e_confused.gif" width="15" height="17" alt=":?" title="Confused"></a>
+                <a href="" ng-click="addSmile('8-)', editorText)"><img src="/images/Smiles/icon_cool.gif" width="15" height="17" alt="8-)" title="Cool"></a>
+                <a href="" ng-click="addSmile(':lol:', editorText)"><img src="/images/Smiles/icon_lol.gif" width="15" height="17" alt=":lol:" title="Laughing"></a>
+                <a href="" ng-click="addSmile(':x', editorText)"><img src="/images/Smiles/icon_mad.gif" width="15" height="17" alt=":x" title="Mad"></a>
+                <a href="" ng-click="addSmile(':P', editorText)"><img src="/images/Smiles/icon_razz.gif" width="15" height="17" alt=":P" title="Razz"></a>
+                <a href="" ng-click="addSmile(':oops:', editorText)"><img src="/images/Smiles/icon_redface.gif" width="15" height="17" alt=":oops:" title="Embarrassed"></a>
+                <a href="" ng-click="addSmile(':cry:', editorText)"><img src="/images/Smiles/icon_cry.gif" width="15" height="17" alt=":cry:" title="Crying or Very Sad"></a>
+                <a href="" ng-click="addSmile(':evil:', editorText)"><img src="/images/Smiles/icon_evil.gif" width="15" height="17" alt=":evil:" title="Evil or Very Mad"></a>
+                <a href="" ng-click="addSmile(':twisted:', editorText)"><img src="/images/Smiles/icon_twisted.gif" width="15" height="17" alt=":twisted:" title="Twisted Evil"></a>
+                <a href="" ng-click="addSmile(':roll:', editorText)"><img src="/images/Smiles/icon_rolleyes.gif" width="15" height="17" alt=":roll:" title="Rolling Eyes"></a>
+                <a href="" ng-click="addSmile(':!:', editorText)"><img src="/images/Smiles/icon_exclaim.gif" width="15" height="17" alt=":!:" title="Exclamation"></a>
+                <a href="" ng-click="addSmile(':?:', editorText)"><img src="/images/Smiles/icon_question.gif" width="15" height="17" alt=":?:" title="Question"></a>
+                <a href="" ng-click="addSmile(':idea:', editorText)"><img src="/images/Smiles/icon_idea.gif" width="15" height="17" alt=":idea:" title="Idea"></a>
+                <a href="" ng-click="addSmile(':arrow:', editorText)"><img src="/images/Smiles/icon_arrow.gif" width="15" height="17" alt=":arrow:" title="Arrow"></a>
+                <a href="" ng-click="addSmile(':|', editorText)"><img src="/images/Smiles/icon_neutral.gif" width="15" height="17" alt=":|" title="Neutral"></a>
+                <a href="" ng-click="addSmile(':mrgreen:', editorText)"><img src="/images/Smiles/icon_mrgreen.gif" width="15" height="17" alt=":mrgreen:" title="Mr. Green"></a>
+                <a href="" ng-click="addSmile(':geek:', editorText)"><img src="/images/Smiles/icon_e_geek.gif" width="17" height="17" alt=":geek:" title="Geek"></a>
+                <a href="" ng-click="addSmile(':ugeek:', editorText)"><img src="/images/Smiles/icon_e_ugeek.gif" width="17" height="18" alt=":ugeek:" title="Uber Geek"></a>
+            </div>
+            <div class="alert-danger fade in" ng-cloak ng-repeat="message in errorText">{{ message }}<br /></div>
+        </div>
+
+        <div text-angular="text-angular" name="editorText" ng-model="editorText" class="pull-left col-md-9"></div>
+    </div>
+    <div class="row">
+        <button class="btn btn-default" ng-click="postReply()">Reply</button>
+    </div>
+
+
+</div>

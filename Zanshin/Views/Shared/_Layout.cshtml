@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html ng-app="zanshin">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/text-angular")
+    @RenderSection("styles", required: false)
+
+</head>
+<body>
+    @Html.Partial("_NavPartial")
+
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="~/images/banners/attack1-900x300.jpg" />
+            </div>
+        </div>
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Big Choppaz</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/text-angular")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

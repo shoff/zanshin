@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Groups</h2>
+
+<div ng-controller="GroupController">
+    <div ng-repeat="group in groups">
+        <h3 ng-bind="group.name"></h3>
+        <span class="badge" ng-cloak>{{ group.users.length }} user(0)</span>
+    </div>
+</div>
+
